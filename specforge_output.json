@@ -1,0 +1,301 @@
+{
+  "input_id": "SAMPLE",
+  "metadata": {
+    "course_code": "CS304",
+    "course_title": "Advanced Algorithms & Complexity",
+    "accreditation": "NBA_ABET_TIER1",
+    "generated_at": "2026-10-29T11:00:00.000Z"
+  },
+  "course_summary": "This advanced course provides a rigorous, in-depth exposition of computational algorithms, algorithmic complexity, and mathematical optimization across 5 foundational modules: Divide & Conquer Strategies & Recurrences, Dynamic Programming & Greedy Models, Network Flow & Matching, Linear Programming & Approximation Algorithms, and NP-Completeness & Randomized Algorithms. Students develop verifiable competency in formal asymptotic bounds, primal-dual relaxations, poly-time reductions, and randomized derandomization techniques strictly aligned with ABET Engineering Accreditation Criteria.",
+  "cos": [
+    {
+      "id": "CO1",
+      "blooms": "L4_Analyze",
+      "text": "Analyze asymptotic runtime bounds of divide-and-conquer algorithms and recurrent relations using the Akra-Bazzi method and master theorem paradigms."
+    },
+    {
+      "id": "CO2",
+      "blooms": "L5_Design",
+      "text": "Design dynamic programming formulations and poly-time reductions for combinatorial optimizations, amortized bounds, and randomized verification."
+    },
+    {
+      "id": "CO3",
+      "blooms": "L3_Implement",
+      "text": "Implement network flow max-flow min-cut formulations for bipartite matching, circulation with demands, and push-relabel computational constraints."
+    },
+    {
+      "id": "CO4",
+      "blooms": "L4_Formulate",
+      "text": "Formulate linear programming relaxations and dual certificate bounds for vertex cover, set cover, and metric traveling salesperson approximations."
+    },
+    {
+      "id": "CO5",
+      "blooms": "L5_Evaluate",
+      "text": "Evaluate complexity class memberships (P, NP, NP-Hard, PSPACE) via formal polynomial-time reductions from 3-SAT, Hamiltonian Cycle, and Subset Sum."
+    },
+    {
+      "id": "CO6",
+      "blooms": "L6_Synthesize",
+      "text": "Synthesize randomized algorithms and derandomization techniques (Chernoff bounds, Markov inequality, min-cut Karger contraction) for intractable domains."
+    }
+  ],
+  "co_po_pso_map": [
+    {
+      "co_id": "CO1",
+      "target": "PO1",
+      "strength": 3,
+      "rationale": "Requires mastery of mathematical induction, Akra-Bazzi integrals, and asymptotic calculus."
+    },
+    {
+      "co_id": "CO1",
+      "target": "PO2",
+      "strength": 3,
+      "rationale": "Formulates formal recurrence relations and boundary condition constraints."
+    },
+    {
+      "co_id": "CO1",
+      "target": "PO3",
+      "strength": 2,
+      "rationale": "Designs divide-and-conquer systems for scalable divide-and-conquer computational kernels."
+    },
+    {
+      "co_id": "CO1",
+      "target": "PSO1",
+      "strength": 3,
+      "rationale": "Directly develops rigorous theoretical computer science core competencies."
+    },
+    {
+      "co_id": "CO2",
+      "target": "PO1",
+      "strength": 3,
+      "rationale": "Applies bellman equation dynamic programming and optimal substructure mathematical proofs."
+    },
+    {
+      "co_id": "CO2",
+      "target": "PO2",
+      "strength": 3,
+      "rationale": "Analyzes amortized accounting bounds and potential function invariants."
+    },
+    {
+      "co_id": "CO2",
+      "target": "PO3",
+      "strength": 3,
+      "rationale": "Synthesizes multi-dimensional memoization tables for high-performance combinatorial problems."
+    },
+    {
+      "co_id": "CO2",
+      "target": "PO5",
+      "strength": 2,
+      "rationale": "Leverages algorithm visualizers and profiling profilers to trace memoized memory cache lines."
+    },
+    {
+      "co_id": "CO2",
+      "target": "PSO1",
+      "strength": 3,
+      "rationale": "Provides foundational algorithmic techniques for state-space search and combinatorial optimization."
+    },
+    {
+      "co_id": "CO2",
+      "target": "PSO2",
+      "strength": 3,
+      "rationale": "Directly transfers to real-world memory-efficient routing and scheduling engines."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PO1",
+      "strength": 3,
+      "rationale": "Requires deep understanding of graph theory, conservation invariants, and duality bounds."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PO2",
+      "strength": 3,
+      "rationale": "Proves Max-Flow Min-Cut dual equivalence and capacity cut bottlenecks."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PO3",
+      "strength": 3,
+      "rationale": "Constructs robust network flow and bipartite matching systems for resource allocation."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PO4",
+      "strength": 3,
+      "rationale": "Analyzes augmenting path invariants and push-relabel distance labels."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PO5",
+      "strength": 2,
+      "rationale": "Uses graph visualizers and network flow testbeds."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PSO1",
+      "strength": 3,
+      "rationale": "Essential algorithmic technique for distributed routing and network operations."
+    },
+    {
+      "co_id": "CO3",
+      "target": "PSO2",
+      "strength": 2,
+      "rationale": "Applies to backend request dispatching and microservice load distribution."
+    },
+    {
+      "co_id": "CO4",
+      "target": "PO1",
+      "strength": 3,
+      "rationale": "Requires matrix algebra, polyhedral geometry, and dual certificate theory."
+    },
+    {
+      "co_id": "CO4",
+      "target": "PO2",
+      "strength": 3,
+      "rationale": "Formulates constraint optimization and gap analysis."
+    },
+    {
+      "co_id": "CO4",
+      "target": "PO3",
+      "strength": 2,
+      "rationale": "Designs bounded approximation algorithms for intractable instances."
+    },
+    {
+      "co_id": "CO4",
+      "target": "PO5",
+      "strength": 2,
+      "rationale": "Leverages modern LP solvers (GLPK, Gurobi) for dual verification."
+    },
+    {
+      "co_id": "CO4",
+      "target": "PSO1",
+      "strength": 3,
+      "rationale": "Underpins advanced computational combinatorial optimization."
+    },
+    {
+      "co_id": "CO4",
+      "target": "PSO3",
+      "strength": 3,
+      "rationale": "Convex optimization is the mathematical engine of neural network training."
+    },
+    {
+      "co_id": "CO5",
+      "target": "PO1",
+      "strength": 3,
+      "rationale": "Requires mastery of formal language theory and non-deterministic machines."
+    },
+    {
+      "co_id": "CO5",
+      "target": "PO2",
+      "strength": 3,
+      "rationale": "Establishes formal reduction proofs demonstrating NP-completeness."
+    },
+    {
+      "co_id": "CO5",
+      "target": "PO4",
+      "strength": 3,
+      "rationale": "Evaluates intractability boundaries and algorithm feasibility limits."
+    },
+    {
+      "co_id": "CO5",
+      "target": "PO12",
+      "strength": 3,
+      "rationale": "Critical thinking habit for recognizing computationally unsolvable problems."
+    },
+    {
+      "co_id": "CO5",
+      "target": "PSO1",
+      "strength": 3,
+      "rationale": "Distinguishes between polynomial solutions and heuristic approximations."
+    },
+    {
+      "co_id": "CO6",
+      "target": "PO1",
+      "strength": 3,
+      "rationale": "Requires probability theory, indicator random variables, and tail bounds."
+    },
+    {
+      "co_id": "CO6",
+      "target": "PO2",
+      "strength": 3,
+      "rationale": "Analyzes expected runtime vs worst-case probability distributions."
+    },
+    {
+      "co_id": "CO6",
+      "target": "PO3",
+      "strength": 3,
+      "rationale": "Synthesizes randomized data structures (Skip Lists, Bloom Filters)."
+    },
+    {
+      "co_id": "CO6",
+      "target": "PO5",
+      "strength": 2,
+      "rationale": "Employs Monte Carlo simulations to empirically verify convergence."
+    },
+    {
+      "co_id": "CO6",
+      "target": "PSO1",
+      "strength": 3,
+      "rationale": "Core foundation for big data streaming and probabilistic hashing."
+    },
+    {
+      "co_id": "CO6",
+      "target": "PSO3",
+      "strength": 3,
+      "rationale": "Probabilistic modeling aligns directly with modern generative AI architectures."
+    }
+  ],
+  "units_count": 5,
+  "defects": [
+    {
+      "code": "CREDIT_HOURS_MISMATCH",
+      "location": {
+        "source": "spec",
+        "section": 3,
+        "refs": ["L:Lecture", "P:Practical", "TotalHours"]
+      },
+      "description": "Credit structure 3:0:2 calculates to 75h contact time, but spec declares 63h (Lecture: 45h vs expected 45h, practical discrepancy).",
+      "fix": "Harmonized contact hours to 75h (45h lecture, 30h practical) to enforce ABET credit-hour formula."
+    },
+    {
+      "code": "HOURS_SUM_DISCREPANCY",
+      "location": {
+        "source": "blueprint",
+        "section": 4,
+        "refs": ["Unit-1", "Unit-2", "Unit-3", "Unit-4", "Unit-5"]
+      },
+      "description": "Sum of module teaching hours (41h) diverges from the prescribed course lecture quota (45h).",
+      "fix": "Reallocated unit teaching hours across modules so total sum matches 45h."
+    },
+    {
+      "code": "BLOOMS_VERB_DRIFT",
+      "location": {
+        "source": "spec",
+        "section": 5,
+        "refs": ["CO3"]
+      },
+      "description": "Outcome CO3 uses passive non-measurable verb 'Understand' violating ABET measurable criteria.",
+      "fix": "Substituted non-measurable verb with measurable cognitive action verb 'Formulate' / 'Analyze' and aligned Bloom's level."
+    },
+    {
+      "code": "DROPPED_LEGACY_SECTION",
+      "location": {
+        "source": "spec",
+        "section": 9,
+        "refs": ["DROP_1"]
+      },
+      "description": "Intake syllabus contained legacy relative grading deviation tables conflicting with standard 2024 Outcome-Based Education (OBE) absolute criterion metrics.",
+      "fix": "Mapped directly to Section 7 OBE Competency Thresholds (Direct Assessment Tier 60%)."
+    },
+    {
+      "code": "DROPPED_LEGACY_SECTION",
+      "location": {
+        "source": "spec",
+        "section": 11,
+        "refs": ["DROP_2"]
+      },
+      "description": "Redundant safety preamble copied from obsolete non-virtual workshop guidelines.",
+      "fix": "Consolidated into Unit 4 embedded Lab Environment Safety Directive standard rubric."
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#0b1c30", "outline": "#75777d", "surface-container-low": "#eff4ff", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "inverse-primary": "#bcc7de", "on-secondary-container": "#fefcff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#85f8c4", "on-error-container": "#93000a", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "primary-container": "#1e293b", "error": "#ba1a1a", "tertiary": "#00190e", "on-primary": "#ffffff", "on-tertiary-fixed": "#002114", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#003ea8", "on-tertiary": "#ffffff", "surface-dim": "#cbdbf5", "surface-container-high": "#dce9ff", "secondary-fixed-dim": "#b4c5ff", "secondary-container": "#316bf3", "surface": "#f8f9ff", "secondary-fixed": "#dbe1ff", "on-primary-fixed": "#111c2d", "on-primary-container": "#8590a6", "secondary": "#0051d5", "surface-tint": "#545f73", "on-primary-fixed-variant": "#3c475a", "primary": "#091426", "on-tertiary-container": "#24a375", "on-secondary-fixed": "#00174b", "outline-variant": "#c5c6cd", "primary-fixed-dim": "#bcc7de", "on-background": "#0b1c30", "tertiary-fixed-dim": "#68dba9", "background": "#f8f9ff", "error-container": "#ffdad6", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#005137", "inverse-surface": "#213145", "primary-fixed": "#d8e3fb", "tertiary-container": "#00301f", "on-surface-variant": "#45474c" }, borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" }, spacing: { "space-md": "0.75rem", gutter: "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", margin: "1.5rem", "gutter-compact": "0.5rem", "space-xl": "1.5rem", "space-lg": "1rem", "space-sm": "0.5rem" }, fontFamily: { "label-sm": ["Inter"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "mono-data": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }], "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "mono-data": ["12px", { lineHeight: "16px", fontWeight: "500" }], "headline-sm": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[22px]">architecture</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wider leading-none">SpecForge</span><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Audit And Validation</span></div></div><div class="inline-flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded-full ml-space-xs shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-mono-data text-mono-data text-on-tertiary-container font-semibold uppercase">API: UP</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Settings" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface focus:outline-none transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Top Context & Pipeline Header Banner -->
+<section class="p-gutter flex flex-col gap-space-md bg-surface-container-low">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="inline-flex items-center gap-1.5 bg-primary px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">verified</span>
+<span class="font-mono-data text-mono-data text-on-primary tracking-wider uppercase font-semibold">VALIDATION ENGINE (V1–V10 DETERMINISTIC)</span>
+</div>
+<div class="flex items-center gap-1 bg-surface px-space-xs py-0.5 rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">SESSION:</span>
+<span class="font-mono-data text-mono-data text-secondary font-bold">#SF-8092-ABET</span>
+</div>
+</div>
+<!-- Health Conformance Score Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Integrity &amp; Compliance</span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-bold">89.2%</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-medium">Spec Conformance</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1 bg-error-container text-on-error-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">error</span>
+            12 Defects
+          </span>
+<span class="font-mono-data text-mono-data text-outline mt-1">Audit Rulepass: 7/10</span>
+</div>
+</div>
+<!-- Linear Micro Progress Bar with Segments -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary-container" style="width: 89.2%"></div>
+<div class="h-full bg-error" style="width: 10.8%"></div>
+</div>
+<!-- Auditor / Reviewer Mode Switcher -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="inline-flex bg-surface-container p-0.5 rounded-lg" id="role-switcher">
+<button class="px-space-md py-1 bg-surface-container-lowest text-primary rounded font-label-sm text-label-sm font-semibold shadow-xs" onclick="switchRole('auditor', this)" type="button">
+            Auditor Mode
+          </button>
+<button class="px-space-md py-1 text-on-surface-variant rounded font-label-sm text-label-sm font-medium hover:text-on-surface" onclick="switchRole('reviewer', this)" type="button">
+            Reviewer Mode
+          </button>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant">Tree Hash: 9d8f…c01a</span>
+</div>
+</div>
+<!-- Quick Action Bar -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-9 px-space-sm bg-primary text-on-primary rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 shadow-sm active:bg-primary-container transition-colors" onclick="triggerToast('validation_report.html compilation generated')" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="truncate">Report.html</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-highest text-primary rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 hover:bg-surface-variant active:bg-surface-dim transition-colors" onclick="triggerToast('JSON schema defects array re-synced')" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span class="truncate">Sync JSON</span>
+</button>
+</div>
+</section>
+<!-- Summary KPI Metrics Bento Grid -->
+<section class="px-gutter pt-space-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Audit Matrix Severity</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Active Buckets</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<!-- High Severity -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Critical Issues</span>
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-error font-bold leading-none">3</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Direct schema &amp; credit mismatch</span>
+</div>
+<div class="mt-space-sm bg-error-container text-on-error-container px-2 py-0.5 rounded text-left font-mono-data text-mono-data font-semibold">
+          High Severity
+        </div>
+</div>
+<!-- Medium Severity -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Warnings</span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-secondary-fixed-variant"></span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-secondary font-bold leading-none">5</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Bloom's taxonomy drift &amp; sum</span>
+</div>
+<div class="mt-space-sm bg-surface-container text-secondary px-2 py-0.5 rounded text-left font-mono-data text-mono-data font-semibold">
+          Medium Severity
+        </div>
+</div>
+<!-- Low Severity -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Advisory</span>
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none">4</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Residual draft tokens &amp; citations</span>
+</div>
+<div class="mt-space-sm bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-left font-mono-data text-mono-data font-semibold">
+          Low Severity
+        </div>
+</div>
+<!-- Dropped Legacy Sections -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Pruned</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">content_cut</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-display-lg text-display-lg text-primary font-bold leading-none">2</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-1 leading-tight">Legacy sections safely dropped</span>
+</div>
+<div class="mt-space-sm bg-surface-container-high text-primary px-2 py-0.5 rounded text-left font-mono-data text-mono-data font-semibold">
+          AST Reconciled
+        </div>
+</div>
+</div>
+</section>
+<!-- Deterministic Validation Rules (V1–V10) Checklist Engine -->
+<section class="px-gutter pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Deterministic Checks</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deterministic validation pipeline (V1–V10)</span>
+</div>
+<span class="font-mono-data text-mono-data bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-0.5 rounded font-bold">10/10 ACTIVE</span>
+</div>
+<!-- Scrollable Micro Rule Grid -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<!-- V1 -->
+<div class="flex items-center justify-between py-1.5 bg-error-container/25 px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-error text-on-error px-1.5 py-0.5 rounded font-bold shrink-0">V1</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Credit Vector (L+T+P) vs Total Hours</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-error shrink-0">cancel</span>
+</div>
+<!-- V2 -->
+<div class="flex items-center justify-between py-1.5 bg-error-container/25 px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-error text-on-error px-1.5 py-0.5 rounded font-bold shrink-0">V2</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Contact Hours Unit Sum Discrepancy</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-error shrink-0">cancel</span>
+</div>
+<!-- V3 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-secondary text-on-secondary px-1.5 py-0.5 rounded font-bold shrink-0">V3</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Bloom's Taxonomy Dictionary Alignment</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">warning</span>
+</div>
+<!-- V4 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container-low px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-surface-variant text-on-surface px-1.5 py-0.5 rounded font-bold shrink-0">V4</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">CO Count Bounds Check (3 to 6 COs)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container shrink-0">check_circle</span>
+</div>
+<!-- V5 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container-low px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-surface-variant text-on-surface px-1.5 py-0.5 rounded font-bold shrink-0">V5</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">CO-PO Matrix Weights Boundary [1, 2, 3]</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container shrink-0">check_circle</span>
+</div>
+<!-- V6 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-secondary text-on-secondary px-1.5 py-0.5 rounded font-bold shrink-0">V6</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Every PO1–PO12 Evaluated with Rationale</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">warning</span>
+</div>
+<!-- V7 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container-low px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-surface-variant text-on-surface px-1.5 py-0.5 rounded font-bold shrink-0">V7</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Archetype Match (Integrated Lab P&gt;0)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container shrink-0">check_circle</span>
+</div>
+<!-- V8 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-secondary text-on-secondary px-1.5 py-0.5 rounded font-bold shrink-0">V8</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Zero Template Placeholder Text Leakage</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">warning</span>
+</div>
+<!-- V9 -->
+<div class="flex items-center justify-between py-1.5 bg-error-container/25 px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-error text-on-error px-1.5 py-0.5 rounded font-bold shrink-0">V9</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Assessment Weightage (Internal + EndSem == 100%)</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-error shrink-0">cancel</span>
+</div>
+<!-- V10 -->
+<div class="flex items-center justify-between py-1.5 bg-surface-container-low px-space-sm rounded">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="font-mono-data text-mono-data bg-surface-variant text-on-surface px-1.5 py-0.5 rounded font-bold shrink-0">V10</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate font-medium">Prescribed Literature IEEE/APA Citation Check</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container shrink-0">check_circle</span>
+</div>
+</div>
+</section>
+<!-- Filter & Group View Switcher -->
+<section class="px-gutter pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Itemized Defect Log</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold" onclick="filterDefects('high')" type="button">High (3)</button>
+<button class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold" onclick="filterDefects('med')" type="button">Med (5)</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm" onclick="filterDefects('all')" type="button">All</button>
+</div>
+</div>
+<!-- Defect Cards List -->
+<div class="flex flex-col gap-space-md" id="defect-list-container">
+<!-- Defect Card 1: High Severity -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm defect-card" data-severity="high">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="inline-flex items-center gap-1.5 bg-error text-on-error px-space-xs py-0.5 rounded font-mono-data text-mono-data font-bold">
+<span class="material-symbols-outlined text-[13px]">dangerous</span>
+<span>ERR_CREDIT_VECTOR_MISMATCH</span>
+</div>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold uppercase">HIGH SEVERITY</span>
+</div>
+<!-- Location Metadata Strip -->
+<div class="bg-surface-container-low p-space-xs rounded flex flex-wrap items-center gap-space-xs text-on-surface font-mono-data text-mono-data">
+<span class="text-on-surface-variant">Source:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-semibold text-secondary">spec</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Section:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-medium">3: Credit Structure</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Refs:</span>
+<span class="bg-surface-container-highest text-primary px-1.5 py-0.5 rounded">['P:Practical', 'TotalHours']</span>
+</div>
+<!-- Problem Description -->
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">DETERMINISTIC FINDING:</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Calculated practical contact hours do not match credit vector P=2 (expected 30 hrs based on 15-week semester model, found 24 hrs).
+          </p>
+</div>
+<!-- Fix Applied & Value Chosen -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[15px]">build_circle</span>
+<span>FIX APPLIED &amp; RECONCILED VALUE:</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary">
+            Reconciled unit practical hours to 30 contact hours matching 2 credits. Added +6 hrs distributed uniformly over Unit 4 and Unit 5 laboratory tracks.
+          </p>
+<span class="font-mono-data text-mono-data text-outline">Rationale: ABET Engineering Criteria 5 credit-hour equivalence rule enforced.</span>
+</div>
+</article>
+<!-- Defect Card 2: High Severity -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm defect-card" data-severity="high">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="inline-flex items-center gap-1.5 bg-error text-on-error px-space-xs py-0.5 rounded font-mono-data text-mono-data font-bold">
+<span class="material-symbols-outlined text-[13px]">dangerous</span>
+<span>ERR_HOURS_SUM_DISCREPANCY</span>
+</div>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold uppercase">HIGH SEVERITY</span>
+</div>
+<!-- Location Metadata Strip -->
+<div class="bg-surface-container-low p-space-xs rounded flex flex-wrap items-center gap-space-xs text-on-surface font-mono-data text-mono-data">
+<span class="text-on-surface-variant">Source:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-semibold text-secondary">blueprint</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Section:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-medium">4: Units Breakdown</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Refs:</span>
+<span class="bg-surface-container-highest text-primary px-1.5 py-0.5 rounded">['Unit-1', 'Unit-3', 'TotalSum']</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">DETERMINISTIC FINDING:</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Sum of individual module lectures (9 + 8 + 9 + 8 + 7 = 41) diverges from prescribed headline lecture pool of 45 hours.
+          </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[15px]">build_circle</span>
+<span>FIX APPLIED &amp; RECONCILED VALUE:</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary">
+            Assigned +2 lecture hours to Unit 2 (Parallel Computing Architectures) and +2 lecture hours to Unit 5 (Emerging Paradigms). Total adjusted to 45.
+          </p>
+<span class="font-mono-data text-mono-data text-outline">Rationale: Blueprint lecture quota hard constraint (V2 validation rule).</span>
+</div>
+</article>
+<!-- Defect Card 3: Medium Severity -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm defect-card" data-severity="med">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="inline-flex items-center gap-1.5 bg-secondary text-on-secondary px-space-xs py-0.5 rounded font-mono-data text-mono-data font-bold">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+<span>ERR_BLOOMS_VERB_DRIFT</span>
+</div>
+<span class="bg-surface-container text-secondary px-2 py-0.5 rounded font-label-sm text-label-sm font-bold uppercase">MEDIUM SEVERITY</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-wrap items-center gap-space-xs text-on-surface font-mono-data text-mono-data">
+<span class="text-on-surface-variant">Source:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-semibold text-secondary">spec</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Section:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-medium">5: Course Outcomes</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Refs:</span>
+<span class="bg-surface-container-highest text-primary px-1.5 py-0.5 rounded">['CO-3:Verb']</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">DETERMINISTIC FINDING:</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Outcome CO-3 initiates with vague pedagogical non-action token "Understand the principles of concurrent synchronization". Fails measurable verb dictionary.
+          </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[15px]">build_circle</span>
+<span>FIX APPLIED &amp; RECONCILED VALUE:</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary">
+            Substituted verb "Understand" with cognitive action predicate "Synthesize and Evaluate". Bloom's level updated to Level 5 (Synthesis).
+          </p>
+<span class="font-mono-data text-mono-data text-outline">Rationale: ABET Criterion 3 Outcome formulation standard dictionary table V3.</span>
+</div>
+</article>
+<!-- Defect Card 4: Low Severity -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm defect-card" data-severity="low">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="inline-flex items-center gap-1.5 bg-surface-tint text-on-primary px-space-xs py-0.5 rounded font-mono-data text-mono-data font-bold">
+<span class="material-symbols-outlined text-[13px]">info</span>
+<span>WARN_TEMPLATE_SAMPLE_LEAKAGE</span>
+</div>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded font-label-sm text-label-sm font-bold uppercase">LOW SEVERITY</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded flex flex-wrap items-center gap-space-xs text-on-surface font-mono-data text-mono-data">
+<span class="text-on-surface-variant">Source:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-semibold text-secondary">template</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Section:</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.5 rounded font-medium">8: Textbooks</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface-variant">Refs:</span>
+<span class="bg-surface-container-highest text-primary px-1.5 py-0.5 rounded">['RefBook-2']</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">DETERMINISTIC FINDING:</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Draft text token "[Insert Recommended Publisher 2024 edition]" detected in literature bibliography item 2.
+          </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col gap-1">
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[15px]">build_circle</span>
+<span>FIX APPLIED &amp; RECONCILED VALUE:</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary">
+            Replaced bracketed placeholder with canonical peer reference: "Patterson &amp; Hennessy, Computer Organization and Design, RISC-V Edition, Morgan Kaufmann".
+          </p>
+<span class="font-mono-data text-mono-data text-outline">Rationale: Institutional library canonical syllabus catalog fallback.</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Dropped Sections & AI Conflict Reconciliation Panel -->
+<section class="px-gutter pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">Dropped Legacy Sections</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">AST synthesis pruned intake nodes</span>
+</div>
+<span class="font-mono-data text-mono-data bg-surface-container text-primary px-2 py-0.5 rounded font-semibold">2 DROPPED</span>
+</div>
+<!-- Pruned Item 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data bg-surface-container-highest text-primary font-bold px-1.5 py-0.5 rounded">DROPPED_LEGACY_SECTION</span>
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">remove_circle</span> Pruned
+        </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Section 9: Deprecated 2018 Bell Curve Formula</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Intake syllabus contained legacy relative grading deviation tables conflicting with standard 2024 Outcome-Based Education (OBE) absolute criterion metrics.
+      </p>
+<div class="bg-surface-container-low p-space-xs rounded mt-1">
+<span class="font-mono-data text-mono-data text-secondary font-semibold block">Fallback Resolution:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Mapped directly to Section 7 OBE Competency Thresholds (Direct Assessment Tier 60%).</span>
+</div>
+</div>
+<!-- Pruned Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-mono-data bg-surface-container-highest text-primary font-bold px-1.5 py-0.5 rounded">DROPPED_LEGACY_SECTION</span>
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">remove_circle</span> Pruned
+        </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Section 11: Duplicate Laboratory Appendix B</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Redundant safety preamble copied from obsolete non-virtual workshop guidelines.
+      </p>
+<div class="bg-surface-container-low p-space-xs rounded mt-1">
+<span class="font-mono-data text-mono-data text-secondary font-semibold block">Fallback Resolution:</span>
+<span class="font-body-sm text-body-sm text-on-surface">Consolidated into Unit 4 embedded Lab Environment Safety Directive standard rubric.</span>
+</div>
+</div>
+</section>
+<!-- Output File Defects Integration Panel (specforge_output.json preview) -->
+<section class="px-gutter pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">JSON Integration Payload</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Embedded defects[] array in specforge_output.json</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">code</span>
+</div>
+<!-- Terminal-styled JSON Block -->
+<div class="bg-primary text-inverse-on-surface p-space-md rounded-xl shadow-sm font-mono-data text-mono-data overflow-x-auto relative group">
+<div class="flex items-center justify-between pb-2 border-b border-inverse-surface text-outline">
+<span class="text-tertiary-fixed font-bold">specforge_output.json [live snippet]</span>
+<button class="text-inverse-primary hover:text-on-primary flex items-center gap-1 font-label-sm text-label-sm" onclick="copyDefectsSnippet()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<pre class="mt-2 text-[11px] leading-tight text-inverse-on-surface select-all" id="json-pre-block"><code>{
+  "audit_version": "v10.2",
+  "conformance_score": 0.892,
+  "defects_count": 12,
+  "defects": [
+    {
+      "code": "ERR_CREDIT_VECTOR_MISMATCH",
+      "severity": "HIGH",
+      "location": {
+        "source": "spec",
+        "section": 3,
+        "refs": ["P", "TotalHours"]
+      },
+      "description": "Calculated practical contact hours do not match credit vector P=2 (expected 30 hrs, found 24 hrs)",
+      "fix_applied": "Reconciled unit practical hours to 30 contact hours matching 2 credits."
+    },
+    {
+      "code": "ERR_BLOOMS_VERB_DRIFT",
+      "severity": "MEDIUM",
+      "location": {
+        "source": "spec",
+        "section": 5,
+        "refs": ["CO-3"]
+      },
+      "description": "Outcome verb 'Understand' replaced with measurable 'Synthesize and Evaluate'",
+      "fix_applied": "Promoted to Bloom Level 5 per taxonomy lookup."
+    }
+  ]
+}</code></pre>
+</div>
+<!-- Action Trigger Buttons -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full h-11 bg-primary text-on-primary rounded font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm active:bg-primary-container transition-colors" onclick="triggerToast('validation_report.html standalone archive downloaded')" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Download validation_report.html</span>
+</button>
+<button class="w-full h-11 bg-surface-container-highest text-primary rounded font-label-md text-label-md font-semibold flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors" onclick="copyDefectsSnippet()" type="button">
+<span class="material-symbols-outlined text-[18px]">data_object</span>
+<span>Copy Defects JSON Payload</span>
+</button>
+</div>
+</section>
+<!-- Interactive Feedback Toast -->
+<div class="fixed bottom-20 left-4 right-4 bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-xl flex items-center justify-between gap-space-sm transition-all duration-300 opacity-0 pointer-events-none translate-y-3 z-50" id="toast-banner">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm truncate" id="toast-message">Action succeeded</span>
+</div>
+<span class="font-mono-data text-mono-data text-inverse-primary shrink-0">READY</span>
+</div>
+</div>
+<script>
+  function switchRole(role, btn) {
+    const parent = document.getElementById('role-switcher');
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(b => {
+      b.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-xs');
+      b.classList.add('text-on-surface-variant', 'font-medium');
+    });
+    btn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-xs');
+    btn.classList.remove('text-on-surface-variant', 'font-medium');
+    triggerToast('Perspective switched to: ' + role.toUpperCase() + ' VIEW');
+  }
+
+  function filterDefects(severity) {
+    const cards = document.querySelectorAll('.defect-card');
+    cards.forEach(card => {
+      if (severity === 'all') {
+        card.style.display = 'flex';
+      } else {
+        const cardSev = card.getAttribute('data-severity');
+        card.style.display = cardSev === severity ? 'flex' : 'none';
+      }
+    });
+    triggerToast('Filtered view by severity: ' + severity.toUpperCase());
+  }
+
+  function copyDefectsSnippet() {
+    const jsonText = document.getElementById('json-pre-block').innerText;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(jsonText).then(() => {
+        triggerToast('JSON schema payload copied to clipboard');
+      });
+    } else {
+      triggerToast('Payload ready for sync in specforge_output.json');
+    }
+  }
+
+  function triggerToast(text) {
+    const toast = document.getElementById('toast-banner');
+    const msg = document.getElementById('toast-message');
+    if (!toast || !msg) return;
+    msg.textContent = text;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+    }, 2400);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary font-semibold"><div class="flex justify-around items-center h-16 px-gutter-compact"><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="spec-builder" href="#"><span class="material-symbols-outlined text-[20px]">dataset</span><span class="font-label-sm text-label-sm">Builder</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="curriculum-units" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-label-sm text-label-sm">Units</span></a><a class="flex flex-col items-center justify-center gap-0.5 w-16 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="accreditation-rubric" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-sm text-label-sm">Rubric</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 w-16 h-11 transition-colors text-secondary font-semibold" data-path="audit-and-validation" href="#"><span class="material-symbols-outlined text-[20px]">rule</span><span class="font-label-sm text-label-sm">Audit</span></a></div></nav></body></html>

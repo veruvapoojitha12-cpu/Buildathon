@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'secondary-container': '#316bf3', 'surface-bright': '#f8f9ff', 'surface-tint': '#545f73', 'on-primary-fixed-variant': '#3c475a', 'tertiary-fixed-dim': '#68dba9', 'inverse-surface': '#213145', 'secondary-fixed': '#dbe1ff', 'primary-fixed-dim': '#bcc7de', 'inverse-on-surface': '#eaf1ff', 'on-error-container': '#93000a', 'on-secondary-fixed': '#00174b', 'outline-variant': '#c5c6cd', 'surface-dim': '#cbdbf5', 'surface-container-low': '#eff4ff', 'surface': '#f8f9ff', 'tertiary-container': '#00301f', 'on-primary': '#ffffff', 'surface-container': '#e5eeff', 'on-surface': '#0b1c30', 'on-background': '#0b1c30', 'tertiary-fixed': '#85f8c4', 'surface-variant': '#d3e4fe', 'on-error': '#ffffff', 'on-primary-fixed': '#111c2d', 'on-tertiary-fixed-variant': '#005137', 'on-surface-variant': '#45474c', 'on-secondary': '#ffffff', 'surface-container-lowest': '#ffffff', 'error-container': '#ffdad6', 'secondary': '#0051d5', 'surface-container-high': '#dce9ff', 'inverse-primary': '#bcc7de', 'primary-fixed': '#d8e3fb', 'on-secondary-container': '#fefcff', 'secondary-fixed-dim': '#b4c5ff', 'on-tertiary-container': '#24a375', 'on-primary-container': '#8590a6', 'error': '#ba1a1a', 'on-tertiary': '#ffffff', 'background': '#f8f9ff', 'primary-container': '#1e293b', 'surface-container-highest': '#d3e4fe', 'tertiary': '#00190e', 'on-tertiary-fixed': '#002114', 'primary': '#091426', 'outline': '#75777d', 'on-secondary-fixed-variant': '#003ea8' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-xl': '1.5rem', 'space-md': '0.75rem', 'margin-mobile': '1rem', 'gutter-compact': '0.5rem', 'space-sm': '0.5rem', 'space-lg': '1rem', 'space-xs': '0.25rem', 'margin': '1.5rem', 'gutter': '1rem' }, fontFamily: { 'headline-lg': ['Inter'], 'label-sm': ['Inter'], 'label-md': ['Inter'], 'headline-sm': ['Inter'], 'headline-md': ['Inter'], 'body-lg': ['Inter'], 'body-sm': ['Inter'], 'mono-data': ['Inter'], 'display-lg': ['Inter'], 'body-md': ['Inter'] }, fontSize: { 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.015em', fontWeight: '600' }], 'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '600' }], 'label-md': ['13px', { lineHeight: '18px', fontWeight: '500' }], 'headline-sm': ['16px', { lineHeight: '24px', letterSpacing: '-0.005em', fontWeight: '600' }], 'headline-md': ['20px', { lineHeight: '28px', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'mono-data': ['12px', { lineHeight: '16px', fontWeight: '500' }], 'display-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '700' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-28 px-margin-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">architecture</span></div><div class="flex flex-col min-w-0"><span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider truncate">SpecForge</span><h1 class="text-headline-sm font-headline-sm text-on-surface truncate leading-tight">Spec Builder</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-lg bg-surface-container text-on-tertiary-fixed-variant" title="GET /api/v1/health: 200 OK"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="text-label-sm font-label-sm uppercase font-mono-data">API: UP</span></div><button aria-label="LLM Settings" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-space-xs"><div class="relative flex items-center"><label class="sr-only" for="role-select">Role Selector</label><select class="h-8 pl-space-sm pr-7 rounded-lg bg-surface-container text-label-md font-label-md text-on-surface appearance-none focus:outline-none focus:bg-surface-container-high transition-colors" id="role-select"><option value="author">Role: Author</option><option value="reviewer">Role: Reviewer</option><option value="hod">Role: HOD</option></select><span class="material-symbols-outlined pointer-events-none absolute right-1.5 text-on-surface-variant text-[16px]">expand_more</span></div><button class="h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center gap-1.5 text-label-md font-label-md transition-colors"><span class="material-symbols-outlined text-secondary text-[18px]">cloud_upload</span><span>Upload files</span></button></div></div></header><main class="flex flex-col relative w-full pt-28 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-mobile pt-space-md pb-space-lg flex flex-col gap-space-lg">
+<!-- Breadcrumb & Pipeline Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-primary cursor-pointer transition-colors">Catalog</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Computer Science</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-secondary font-semibold">CS304 Intake</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight">Course Intake &amp; Parser</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Syllabus ingestion, automated AST extraction, and Zod validation.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-mono-data text-mono-data font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+          Ingestion Ready
+        </span>
+</div>
+</div>
+<!-- Multi-format Engine Verification Pill Strip -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+          PARSER STACK
+        </span>
+<span class="text-on-tertiary-container font-mono-data bg-tertiary-fixed/30 px-1.5 py-0.5 rounded">v2.4 Active</span>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-0.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-data text-body-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>mammoth (.docx)
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-data text-body-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>pdf-parse (.pdf)
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-data text-body-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>cheerio (.html)
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-mono-data text-body-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>word-extractor (.doc)
+        </span>
+</div>
+</div>
+<!-- Upload Zone: Dual Dropcards -->
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: Primary Syllabus -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-label-md font-label-md text-on-surface font-semibold">Course Specification File</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-error-container text-on-error-container">Required</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Accepts .docx, .pdf, .html, .doc</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" title="Clear selection">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Selected Document State -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">task</span>
+<div class="flex flex-col min-w-0">
+<span class="text-label-md font-label-md text-on-surface font-semibold truncate">CS304_Adv_Algo_Syllabus.docx</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-mono-data">2.4 MB • 6 Sections parsed</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-container font-label-sm text-label-sm font-semibold uppercase">Parsed</span>
+</div>
+</div>
+<!-- Card 2: Question-Paper Blueprint -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative group cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-label-md font-label-md text-on-surface font-semibold">Question-Paper Blueprint</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-surface-container text-on-surface-variant">Optional</span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Assessment mapping &amp; Bloom weights</span>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col items-center justify-center text-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[26px]">add_circle</span>
+<p class="text-label-md font-label-md text-on-surface font-medium">Attach Scheme of Evaluation / Blueprint</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Tap to browse or drop matching rubric PDF</p>
+</div>
+</div>
+</div>
+<!-- Server Transformation Pipeline Banner -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">psychology</span>
+<span class="font-label-md text-label-md text-white font-semibold">LLM Orchestration Status</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-white/10 text-tertiary-fixed text-label-sm font-mono-data">Schema v2.1 Validated</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-primary-container">
+        Synthesized via <code class="bg-black/30 px-1 py-0.5 rounded text-white font-mono-data">server/llm.ts generateJson()</code> with full schema enforcement. Zero structural hallucinations detected.
+      </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-9 rounded-lg bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-95" id="reparseBtn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Parse &amp; Extract Specification</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-label-md text-label-md transition-colors flex items-center justify-center" title="Reset raw uploads">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- SECTION: Hydrated Specification Form -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-secondary font-semibold uppercase tracking-wider">Hydrated AST Model</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Structured Course Specification</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono-data text-body-sm text-on-surface">100% Ingested</span>
+</div>
+<!-- Course Metadata Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<h4 class="text-label-md font-label-md font-semibold text-on-surface uppercase tracking-wide">Core Metadata</h4>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="grid grid-cols-3 gap-2">
+<div class="col-span-1 flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant font-medium">Course Code</label>
+<input class="h-9 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-mono-data font-semibold text-body-md focus:bg-surface-container focus:outline-none transition-colors" type="text" value="CS304"/>
+</div>
+<div class="col-span-2 flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant font-medium">Department</label>
+<input class="h-9 px-2.5 rounded-lg bg-surface-container-low text-on-surface text-body-sm focus:bg-surface-container focus:outline-none transition-colors" type="text" value="Computer Science &amp; Engineering"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant font-medium">Course Title</label>
+<input class="h-9 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-semibold text-body-md focus:bg-surface-container focus:outline-none transition-colors" type="text" value="Advanced Algorithms &amp; Complexity"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant font-medium">Credits (L:T:P)</label>
+<div class="h-9 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-mono-data text-body-sm flex items-center justify-between">
+<span>3:1:0</span>
+<span class="text-secondary font-semibold">4 Credits</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-label-sm font-label-sm text-on-surface-variant font-medium">Course Classification</label>
+<div class="relative flex items-center">
+<select class="w-full h-9 pl-2.5 pr-7 rounded-lg bg-surface-container-low text-body-sm text-on-surface appearance-none focus:outline-none font-medium">
+<option selected="">Professional Core / Theory</option>
+<option>Program Elective</option>
+<option>Open Elective</option>
+<option>Applied Laboratory</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Outcomes (COs) Accordion / Cards -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">target</span>
+<h4 class="text-label-md font-label-md font-semibold text-on-surface uppercase tracking-wide">Course Outcomes (COs)</h4>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">3 Outcomes</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- CO 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-mono-data text-label-sm font-bold text-primary">CO1</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-semibold">Bloom: L4 - Analyze</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono-data text-on-surface-variant">Verb: Analyze</span>
+</div>
+<textarea class="w-full text-body-sm font-body-sm bg-surface-container-lowest p-2 rounded text-on-surface resize-none focus:outline-none" rows="2">Analyze asymptotic runtime of divide-and-conquer algorithms and recurrent relations using the Akra-Bazzi method.</textarea>
+</div>
+<!-- CO 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-mono-data text-label-sm font-bold text-primary">CO2</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-container font-semibold">Bloom: L5 - Evaluate/Design</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono-data text-on-surface-variant">Verb: Design</span>
+</div>
+<textarea class="w-full text-body-sm font-body-sm bg-surface-container-lowest p-2 rounded text-on-surface resize-none focus:outline-none" rows="2">Design dynamic programming formulations and poly-time reductions for NP-hard approximations and randomized verification.</textarea>
+</div>
+<!-- CO 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest font-mono-data text-label-sm font-bold text-primary">CO3</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-semibold">Bloom: L3 - Apply</span>
+</div>
+<span class="text-label-sm font-label-sm font-mono-data text-on-surface-variant">Verb: Implement</span>
+</div>
+<textarea class="w-full text-body-sm font-body-sm bg-surface-container-lowest p-2 rounded text-on-surface resize-none focus:outline-none" rows="2">Implement network flow max-flow min-cut formulations for bipartite matching and computational circulation constraints.</textarea>
+</div>
+</div>
+<button class="h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-label-md font-label-md font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Course Outcome</span>
+</button>
+</div>
+<!-- Units Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+<h4 class="text-label-md font-label-md font-semibold text-on-surface uppercase tracking-wide">Units Breakdown</h4>
+</div>
+<span class="font-mono-data text-body-sm text-secondary font-semibold">Total: 45 Contact Hrs</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Unit 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-label-md font-label-md text-on-surface">Unit I: Divide &amp; Conquer Strategies</span>
+<div class="flex items-center gap-1">
+<input class="w-12 h-7 text-center rounded bg-surface-container-lowest text-on-surface font-mono-data text-body-sm focus:outline-none" type="number" value="9"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant">hrs</span>
+</div>
+</div>
+<textarea class="w-full text-body-sm font-body-sm bg-surface-container-lowest p-2 rounded text-on-surface resize-none focus:outline-none" rows="2">Recurrence relations, Akra-Bazzi theorem, Strassen's matrix multiplication, Fast Fourier Transform (FFT) polynomial products.</textarea>
+</div>
+<!-- Unit 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-label-md font-label-md text-on-surface">Unit II: Dynamic Programming &amp; Greedy Models</span>
+<div class="flex items-center gap-1">
+<input class="w-12 h-7 text-center rounded bg-surface-container-lowest text-on-surface font-mono-data text-body-sm focus:outline-none" type="number" value="11"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant">hrs</span>
+</div>
+</div>
+<textarea class="w-full text-body-sm font-body-sm bg-surface-container-lowest p-2 rounded text-on-surface resize-none focus:outline-none" rows="2">Matrix chain multiplication, optimal binary search trees, all-pairs shortest paths, amortized potential bounds, disjoint set forests.</textarea>
+</div>
+<!-- Unit 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-label-md font-label-md text-on-surface">Unit III: Network Flow &amp; Matching</span>
+<div class="flex items-center gap-1">
+<input class="w-12 h-7 text-center rounded bg-surface-container-lowest text-on-surface font-mono-data text-body-sm focus:outline-none" type="number" value="10"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant">hrs</span>
+</div>
+</div>
+<textarea class="w-full text-body-sm font-body-sm bg-surface-container-lowest p-2 rounded text-on-surface resize-none focus:outline-none" rows="2">Max-Flow Min-Cut Theorem, Ford-Fulkerson, Edmonds-Karp, push-relabel algorithm, maximum bipartite matching formulations.</textarea>
+</div>
+</div>
+</div>
+<!-- Matrix Preview Section: Bento Grid -->
+<div class="flex flex-col gap-space-sm">
+<h4 class="text-label-md font-label-md font-semibold text-on-surface uppercase tracking-wide flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">grid_4x4</span>
+          Accreditation &amp; Workload Matrices
+        </h4>
+<!-- CO-PO Mapping Table Matrix -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm overflow-x-auto">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-label-md font-label-md text-on-surface">CO-PO Attainment Correlation</span>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant font-mono-data">
+<span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span>3: High</span>
+<span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>2: Med</span>
+<span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>1: Low</span>
+</div>
+</div>
+<div class="min-w-[320px]">
+<div class="grid grid-cols-7 gap-1 text-center font-mono-data text-label-sm font-semibold pb-1 text-on-surface-variant">
+<div>CO</div>
+<div>PO1</div>
+<div>PO2</div>
+<div>PO3</div>
+<div>PO4</div>
+<div>PO5</div>
+<div>PSO1</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="grid grid-cols-7 gap-1 text-center font-mono-data text-body-sm">
+<div class="bg-surface-container rounded py-1 font-bold text-primary">CO1</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary-fixed-dim rounded py-1 text-on-secondary-fixed font-bold">2</div>
+<div class="bg-surface-container rounded py-1 text-on-surface-variant">1</div>
+<div class="bg-surface-container-low rounded py-1 text-outline">-</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center font-mono-data text-body-sm">
+<div class="bg-surface-container rounded py-1 font-bold text-primary">CO2</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary-fixed-dim rounded py-1 text-on-secondary-fixed font-bold">2</div>
+<div class="bg-surface-container rounded py-1 text-on-surface-variant">1</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center font-mono-data text-body-sm">
+<div class="bg-surface-container rounded py-1 font-bold text-primary">CO3</div>
+<div class="bg-secondary-fixed-dim rounded py-1 text-on-secondary-fixed font-bold">2</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary rounded py-1 text-on-secondary font-bold">3</div>
+<div class="bg-secondary-fixed-dim rounded py-1 text-on-secondary-fixed font-bold">2</div>
+<div class="bg-secondary-fixed-dim rounded py-1 text-on-secondary-fixed font-bold">2</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Split Grid: Teaching Hours & Assessment Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Teaching Hours Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<span class="font-semibold text-label-md font-label-md text-on-surface">Instruction Hours</span>
+<div class="grid grid-cols-3 gap-2 pt-1 text-center">
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Lecture</span>
+<span class="font-mono-data text-headline-sm font-bold text-on-surface">45h</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Tutorial</span>
+<span class="font-mono-data text-headline-sm font-bold text-on-surface">15h</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low flex flex-col">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Practical</span>
+<span class="font-mono-data text-headline-sm font-bold text-outline-variant">0h</span>
+</div>
+</div>
+</div>
+<!-- Assessment Distribution Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<span class="font-semibold text-label-md font-label-md text-on-surface">Evaluation Weightage</span>
+<div class="flex items-center justify-between gap-2 pt-1">
+<div class="flex-1 p-2 rounded-lg bg-surface-container-low flex flex-col items-center">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Internal (CIA)</span>
+<span class="font-mono-data text-headline-sm font-bold text-secondary">40%</span>
+</div>
+<div class="flex-1 p-2 rounded-lg bg-surface-container-low flex flex-col items-center">
+<span class="text-label-sm font-label-sm text-on-surface-variant">End-Sem (ESE)</span>
+<span class="font-mono-data text-headline-sm font-bold text-primary">60%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Prescribed Resources & Textbooks -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+<h4 class="text-label-md font-label-md font-semibold text-on-surface uppercase tracking-wide">Prescribed Literature</h4>
+</div>
+<button class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">add</span> Add Resource
+          </button>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface truncate">Introduction to Algorithms (4th Edition)</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono-data">Cormen, Leiserson, Rivest, Stein • MIT Press • 2022</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface text-[10px] font-bold">Textbook</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="text-body-sm font-body-sm font-semibold text-on-surface truncate">Algorithm Design</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-mono-data">Kleinberg &amp; Tardos • Pearson Education • 2013</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px] font-bold">Reference</span>
+</div>
+</div>
+</div>
+<!-- Collapsible Raw JSON Panel (Zod Verified) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<button class="flex items-center justify-between w-full text-left focus:outline-none" id="toggleJsonBtn">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">code</span>
+<span class="text-label-md font-label-md font-semibold text-on-surface">Inspect Parsed JSON Output (Zod Verified)</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed/30 text-on-tertiary-container font-mono-data text-label-sm font-bold">Valid</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="jsonChevron">expand_more</span>
+</button>
+<div class="hidden flex-col gap-2 pt-1 transition-all" id="jsonBlock">
+<div class="bg-primary text-on-primary rounded-lg p-3 font-mono-data text-mono-data overflow-x-auto max-h-64 scrollbar-none leading-relaxed">
+<pre class="text-surface-container-high">{
+  <span class="text-tertiary-fixed">"courseCode"</span>: <span class="text-secondary-fixed">"CS304"</span>,
+  <span class="text-tertiary-fixed">"title"</span>: <span class="text-secondary-fixed">"Advanced Algorithms &amp; Complexity"</span>,
+  <span class="text-tertiary-fixed">"department"</span>: <span class="text-secondary-fixed">"Computer Science &amp; Engineering"</span>,
+  <span class="text-tertiary-fixed">"credits"</span>: { <span class="text-tertiary-fixed">"L"</span>: 3, <span class="text-tertiary-fixed">"T"</span>: 1, <span class="text-tertiary-fixed">"P"</span>: 0 },
+  <span class="text-tertiary-fixed">"courseOutcomes"</span>: [
+    { <span class="text-tertiary-fixed">"id"</span>: <span class="text-secondary-fixed">"CO1"</span>, <span class="text-tertiary-fixed">"bloom"</span>: <span class="text-secondary-fixed">"L4"</span>, <span class="text-tertiary-fixed">"verb"</span>: <span class="text-secondary-fixed">"Analyze"</span> },
+    { <span class="text-tertiary-fixed">"id"</span>: <span class="text-secondary-fixed">"CO2"</span>, <span class="text-tertiary-fixed">"bloom"</span>: <span class="text-secondary-fixed">"L5"</span>, <span class="text-tertiary-fixed">"verb"</span>: <span class="text-secondary-fixed">"Design"</span> },
+    { <span class="text-tertiary-fixed">"id"</span>: <span class="text-secondary-fixed">"CO3"</span>, <span class="text-tertiary-fixed">"bloom"</span>: <span class="text-secondary-fixed">"L3"</span>, <span class="text-tertiary-fixed">"verb"</span>: <span class="text-secondary-fixed">"Implement"</span> }
+  ],
+  <span class="text-tertiary-fixed">"units"</span>: [
+    { <span class="text-tertiary-fixed">"unit"</span>: 1, <span class="text-tertiary-fixed">"hours"</span>: 9, <span class="text-tertiary-fixed">"title"</span>: <span class="text-secondary-fixed">"Divide &amp; Conquer Strategies"</span> },
+    { <span class="text-tertiary-fixed">"unit"</span>: 2, <span class="text-tertiary-fixed">"hours"</span>: 11, <span class="text-tertiary-fixed">"title"</span>: <span class="text-secondary-fixed">"Dynamic Programming"</span> },
+    { <span class="text-tertiary-fixed">"unit"</span>: 3, <span class="text-tertiary-fixed">"hours"</span>: 10, <span class="text-tertiary-fixed">"title"</span>: <span class="text-secondary-fixed">"Network Flow"</span> }
+  ],
+  <span class="text-tertiary-fixed">"coPoMatrix"</span>: { <span class="text-tertiary-fixed">"mapped"</span>: <span class="text-secondary-fixed">true</span>, <span class="text-tertiary-fixed">"strengthAvg"</span>: 2.7 },
+  <span class="text-tertiary-fixed">"assessmentTable"</span>: { <span class="text-tertiary-fixed">"cia"</span>: 40, <span class="text-tertiary-fixed">"ese"</span>: 60 }
+}</pre>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant px-1">
+<span>Payload Size: 4.8 KB</span>
+<button class="hover:text-primary transition-colors flex items-center gap-1 font-mono-data">
+<span class="material-symbols-outlined text-[14px]">content_copy</span> Copy Raw Object
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pinned Save & Forward Pipeline Section -->
+<div class="sticky bottom-16 z-40 bg-surface/95 backdrop-blur-md p-space-sm rounded-xl shadow-lg flex items-center justify-between gap-2">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Spec</span>
+</button>
+<button class="flex-1 h-10 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span>Proceed to Unit Builder</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple interaction handles for the Intake screen
+  const toggleBtn = document.getElementById('toggleJsonBtn');
+  const jsonBlock = document.getElementById('jsonBlock');
+  const jsonChevron = document.getElementById('jsonChevron');
+
+  if (toggleBtn && jsonBlock && jsonChevron) {
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = jsonBlock.classList.contains('hidden');
+      if (isHidden) {
+        jsonBlock.classList.remove('hidden');
+        jsonBlock.classList.add('flex');
+        jsonChevron.classList.add('rotate-180');
+      } else {
+        jsonBlock.classList.add('hidden');
+        jsonBlock.classList.remove('flex');
+        jsonChevron.classList.remove('rotate-180');
+      }
+    });
+  }
+
+  const reparseBtn = document.getElementById('reparseBtn');
+  if (reparseBtn) {
+    reparseBtn.addEventListener('click', () => {
+      const icon = reparseBtn.querySelector('.material-symbols-outlined');
+      if (icon) {
+        icon.classList.add('animate-spin');
+        setTimeout(() => {
+          icon.classList.remove('animate-spin');
+        }, 800);
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary bg-surface-container-low font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="spec-builder" href="#"><span class="material-symbols-outlined text-[22px]">edit_document</span><span class="text-label-sm font-label-sm">Builder</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="course-units" href="#"><span class="material-symbols-outlined text-[22px]">layers</span><span class="text-label-sm font-label-sm">Units</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="rubric-outcomes" href="#"><span class="material-symbols-outlined text-[22px]">checklist_rtl</span><span class="text-label-sm font-label-sm">Rubric</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="export" href="#"><span class="material-symbols-outlined text-[22px]">ios_share</span><span class="text-label-sm font-label-sm">Export</span></a></div></nav></body></html>

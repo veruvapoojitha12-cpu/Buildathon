@@ -1,0 +1,82 @@
+{
+  "accreditation": "NBA / ABET Tier-1 Standard",
+  "pos": [
+    {
+      "id": "PO1",
+      "title": "Engineering Knowledge",
+      "statement": "Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems."
+    },
+    {
+      "id": "PO2",
+      "title": "Problem Analysis",
+      "statement": "Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences."
+    },
+    {
+      "id": "PO3",
+      "title": "Design / Development of Solutions",
+      "statement": "Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations."
+    },
+    {
+      "id": "PO4",
+      "title": "Conduct Investigations of Complex Problems",
+      "statement": "Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions."
+    },
+    {
+      "id": "PO5",
+      "title": "Modern Tool Usage",
+      "statement": "Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations."
+    },
+    {
+      "id": "PO6",
+      "title": "The Engineer and Society",
+      "statement": "Apply reasoning informed by contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to professional engineering practice."
+    },
+    {
+      "id": "PO7",
+      "title": "Environment and Sustainability",
+      "statement": "Understand the impact of professional engineering solutions in societal and environmental contexts, and demonstrate knowledge of, and need for sustainable development."
+    },
+    {
+      "id": "PO8",
+      "title": "Ethics",
+      "statement": "Apply ethical principles and commit to professional ethics and responsibilities and norms of engineering practice."
+    },
+    {
+      "id": "PO9",
+      "title": "Individual and Team Work",
+      "statement": "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings."
+    },
+    {
+      "id": "PO10",
+      "title": "Communication",
+      "statement": "Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions."
+    },
+    {
+      "id": "PO11",
+      "title": "Project Management and Finance",
+      "statement": "Demonstrate knowledge and understanding of engineering and management principles and apply these to one's own work, as a member and leader in a team, to manage projects and in multidisciplinary environments."
+    },
+    {
+      "id": "PO12",
+      "title": "Life-long Learning",
+      "statement": "Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+    }
+  ],
+  "psos": [
+    {
+      "id": "PSO1",
+      "title": "Core Systems & Algorithms",
+      "statement": "Design, analyze, and implement efficient algorithmic paradigms, distributed systems, and real-time computational infrastructure."
+    },
+    {
+      "id": "PSO2",
+      "title": "Software Architecture & Scalability",
+      "statement": "Engineer scalable, modular, secure, and production-grade software applications adhering to modern industry standards."
+    },
+    {
+      "id": "PSO3",
+      "title": "Data Science & Computational Intelligence",
+      "statement": "Develop computational intelligence, machine learning models, and data analytics pipelines for complex multidisciplinary domains."
+    }
+  ]
+}

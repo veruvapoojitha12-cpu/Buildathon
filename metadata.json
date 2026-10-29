@@ -1,0 +1,7 @@
+{
+  "name": "SpecForge Academic Workbench",
+  "description": "Institutional-grade academic curriculum specification workbench, intake parser, CO-PO-PSO alignment scoring, deterministic validation audit, and accreditation governance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
